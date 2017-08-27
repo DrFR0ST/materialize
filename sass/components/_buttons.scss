@@ -17,14 +17,17 @@
 .btn.disabled,
 .btn-floating.disabled,
 .btn-large.disabled,
+.btn-overlined.disabled,
 .btn-flat.disabled,
 .btn:disabled,
 .btn-floating:disabled,
 .btn-large:disabled,
+.btn-overlined:disabled,
 .btn-flat:disabled,
 .btn[disabled],
 .btn-floating[disabled],
 .btn-large[disabled],
+.btn-overlined[disabled],
 .btn-flat[disabled] {
   pointer-events: none;
   background-color: $button-disabled-background !important;
@@ -42,6 +45,7 @@
 .btn,
 .btn-floating,
 .btn-large,
+.btn-overlined,
 .btn-flat {
   font-size: $button-font-size;
   outline: 0;
@@ -74,6 +78,26 @@
   &:hover {
     background-color: $button-raised-background-hover;
     @extend .z-depth-1-half;
+  }
+
+  &.btn-outlined {
+    background-color: transparent;
+    color: $button-raised-background;
+    border: 2px solid $button-raised-background;
+
+    &.disabled {
+      border: 2px solid transparent;
+    }
+  }
+
+  &.btn-outlined:hover {
+    background-color: $button-raised-background-hover;
+    color: #fff;
+    border: 2px solid $button-raised-background-hover;
+  }
+
+  &.btn-rounded {
+    border-radius: 30px;
   }
 }
 
